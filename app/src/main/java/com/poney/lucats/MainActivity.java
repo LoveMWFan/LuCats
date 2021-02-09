@@ -1,10 +1,10 @@
 package com.poney.lucats;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.common.mvp.BaseMvpActivity;
+
+public class MainActivity extends BaseMvpActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
