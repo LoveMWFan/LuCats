@@ -4,10 +4,9 @@ import com.common.mvp.BridgeNode;
 import com.common.mvp.INewModelRoute;
 import com.common.mvp.INewViewRoute;
 import com.common.mvp.IRoute;
+import com.common.mvp.contract.IMvpContract;
 import com.common.mvp.model.BaseMvpModel;
-import com.common.mvp.model.IMvpModel;
 import com.common.mvp.view.BaseMvpView;
-import com.common.mvp.view.IMvpView;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,7 +16,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
 
-public abstract class BaseMvpPresenter<M extends IMvpModel, V extends IMvpView> implements com.common.mvp.presenter.IMvpPresenter<M, V> {
+public abstract class BaseMvpPresenter<M extends IMvpContract.IMvpModel, V extends IMvpContract.IMvpView> implements IMvpContract.IMvpPresenter<M, V> {
 
     private CompositeDisposable mCompositeSubscription = new CompositeDisposable();
 
@@ -90,7 +89,7 @@ public abstract class BaseMvpPresenter<M extends IMvpModel, V extends IMvpView> 
 
     private Class getAssignableClassFrom(Class aClass) {
         if (aClass.isInterface()) {
-            if (IMvpView.class.isAssignableFrom(aClass)) {
+            if (IMvpContract.IMvpView.class.isAssignableFrom(aClass)) {
                 return aClass;
             }
         }

@@ -8,31 +8,25 @@ ext {
 
     ]
 
-    kotlinConfig = [
-            kotlinVersion: '1.1.60'
-    ]
-
-    supportLibrary = "28.0.0"
-
     dependenciesConfig = [
-            appcompatV7            : 'androidx.appcompat:appcompat:1.2.0',
-            design                 : 'com.google.android.material:material:1.0.0',
-            cardviewV7             : 'androidx.cardview:cardview:1.0.0',
-            recyclerviewV7         : 'androidx.recyclerview:recyclerview:1.0.0',
-            rxlifecycle            : "com.trello.rxlifecycle3:rxlifecycle:3.1.0",
-            rxlifecycleComponents  : "com.trello.rxlifecycle3:rxlifecycle-components:3.1.0",
-            retrofit2AdapterRxjava : "com.squareup.retrofit2:adapter-rxjava:2.0.1",
-            retrofit2Retrofit      : "com.squareup.retrofit2:retrofit:2.0.1",
-            retrofit2Converter     : "com.squareup.retrofit2:converter-gson:2.0.1",
+            appcompatV7           : 'androidx.appcompat:appcompat:1.2.0',
+            design                : 'com.google.android.material:material:1.0.0',
+            cardviewV7            : 'androidx.cardview:cardview:1.0.0',
+            recyclerviewV7        : 'androidx.recyclerview:recyclerview:1.0.0',
+            rxlifecycle           : "com.trello.rxlifecycle3:rxlifecycle:3.1.0",
+            rxlifecycleComponents : "com.trello.rxlifecycle3:rxlifecycle-components:3.1.0",
+            retrofit2AdapterRxjava: "com.squareup.retrofit2:adapter-rxjava:2.0.1",
+            retrofit2Retrofit     : "com.squareup.retrofit2:retrofit:2.0.1",
+            retrofit2Converter    : "com.squareup.retrofit2:converter-gson:2.0.1",
 
-            butterknife            : "com.jakewharton:butterknife:10.1.0",
-            butterknifeannotation  : "com.jakewharton:butterknife-compiler:10.1.0",
+            butterknife           : "com.jakewharton:butterknife:10.1.0",
+            butterknifeannotation : "com.jakewharton:butterknife-compiler:10.1.0",
 
-            rxpermissions          : 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4',
+            rxpermissions         : 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4',
 
-            eventbus3              : 'org.greenrobot:eventbus:3.1.1',
-            okhttp3Logging         : 'com.squareup.okhttp3:logging-interceptor:3.6.0',
-            commonsLang            : 'org.apache.commons:commons-lang3:3.5'
+            eventbus3             : 'org.greenrobot:eventbus:3.1.1',
+            okhttp3Logging        : 'com.squareup.okhttp3:logging-interceptor:3.6.0',
+            commonsLang           : 'org.apache.commons:commons-lang3:3.5'
 
 
     ]

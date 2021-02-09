@@ -3,12 +3,13 @@ package com.common.mvp.view;
 import android.app.Activity;
 
 import com.common.mvp.MvpEventListener;
+import com.common.mvp.contract.IMvpContract;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
-public abstract class BaseMvpView<E extends MvpEventListener> implements IMvpView<E> {
+public abstract class BaseMvpView<E extends MvpEventListener> implements IMvpContract.IMvpView<E> {
     private Activity mActivity;
 
     public BaseMvpView(Activity activity) {
@@ -30,10 +31,10 @@ public abstract class BaseMvpView<E extends MvpEventListener> implements IMvpVie
         return mEventListener;
     }
 
-    private Map<Class, IMvpView> mInnerViews = new HashMap<>();
+    private Map<Class, IMvpContract.IMvpView> mInnerViews = new HashMap<>();
 
     @Override
-    public void addInnerView(IMvpView v) {
+    public void addInnerView(IMvpContract.IMvpView v) {
         if (mInnerViews == null || v == null) {
             return;
         }
@@ -45,7 +46,7 @@ public abstract class BaseMvpView<E extends MvpEventListener> implements IMvpVie
 
     private Class getAssignableClassFrom(Class aClass) {
         if (aClass.isInterface()) {
-            if (IMvpView.class.isAssignableFrom(aClass)) {
+            if (IMvpContract.IMvpView.class.isAssignableFrom(aClass)) {
                 return aClass;
             }
         }
@@ -65,7 +66,7 @@ public abstract class BaseMvpView<E extends MvpEventListener> implements IMvpVie
     }
 
     @Override
-    public <T extends IMvpView> T getInnerView(Class<T> tClass) {
+    public <T extends IMvpContract.IMvpView> T getInnerView(Class<T> tClass) {
         if (mInnerViews == null) {
             return null;
         }

@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.poney.lucats"
-        minSdkVersion 16
+        minSdkVersion 18
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -31,7 +31,8 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar","*.aar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':mvp')
+
+    implementation project(path: ':labase')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
